@@ -2,17 +2,33 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
-    <%= @order.email %>
+    
   </header>
 
-  <% @line_items.each do |item| %>
-    <%= item.total_price_cents %>
-    <%= item.product_id %>
-    <%= item.name %>
-    <%= item.description %>
-
-
-  <% end %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Quantity</th>
+        <th scope="col">Email</th>
+        <th scope="col">Name</th>
+        <th scope="col">Final Ammount</th>
+        <th scope="col">Description</th>
+        <th scope="col">Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @line_items.each do |item| %>
+        <tr>
+          <th scope="row"><%= item.quantity %></th>
+          <td><%= @order.email %></td>
+          <td><%= item.name %></td>
+          <td><%= humanized_money_with_symbol item.total_price_cents/100.00 %></td>
+          <td><%= item.description %></td>
+          <td><img src="jungle-rails/db/seed_assets/<%= item.image %>" alt="<%= item.image %>"</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
   
 
   <div class="order-summary jumbotron">
