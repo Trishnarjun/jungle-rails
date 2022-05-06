@@ -2,7 +2,18 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
+    <%= @order.email %>
   </header>
+
+  <% @line_items.each do |item| %>
+    <%= item.total_price_cents %>
+    <%= item.product_id %>
+    <%= item.name %>
+    <%= item.description %>
+
+
+  <% end %>
+  
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
