@@ -3,8 +3,6 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @line_items = @order.line_items.joins(:product).select("line_items.*, products.name, products.image, products.description")
-    puts "reall one"
-    puts @line_items.to_yaml
     
   end
 
