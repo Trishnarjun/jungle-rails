@@ -23,6 +23,12 @@ Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
+## Screenshots
+
+!["main page of the jungle scheduler"](https://github.com/Trishnarjun/jungle-rails/blob/master/docs/Screen%20Shot%202022-05-11%20at%2010.56.31%20PM.png)
+!["the cart clicked on when empty"](https://github.com/Trishnarjun/jungle-rails/blob/master/docs/Screen%20Shot%202022-05-11%20at%2010.56.43%20PM.png)
+!["sorted productes"](https://github.com/Trishnarjun/jungle-rails/blob/master/docs/Screen%20Shot%202022-05-11%20at%2010.56.57%20PM.png)
+
 ## Dependencies
 
 - Rails 6.1 [Rails Guide](http://guides.rubyonrails.org/v6.1/)
